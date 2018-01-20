@@ -20,6 +20,8 @@ Altitude = 0
 T_10K_ARM = 0
 L_10K:set(0) 
 
+local mPressure                     = 1008 -- pressure start
+
 
 function post_initialize()
     
@@ -36,7 +38,7 @@ end
 function update()
 	local Altitude = sensor_data.getBarometricAltitude()*feet_per_meter
 
-	
+
 	
 	Alt100:set(((Altitude)/10) % 1000)	 			-- 12345 % 1000 = 345
 	Alt1000:set((((Altitude)/100) % 10000 ) % 100)  -- 12345 % 10000 = 2345
