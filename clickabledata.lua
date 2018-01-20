@@ -317,7 +317,7 @@ elements["PTR-T-ALARME"]		= default_3_position_tumb(_("High Alpha Alarm, HIDRAG/
 
 --Front Switch Control Panel
 elements["PTR-PNL-T-SON"]	= default_2_position_tumb(_("Alarme Sonore, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_7, 284)
-elements["PTR-PNL-T-PITOT"]	= default_2_position_tumb(_("Pitot Heat, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_8, 285)
+elements["PNT_004"]	= default_2_position_tumb(_("Pitot Heat, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_8, 204)
 elements["PTR-PNL-T-CENTGYRO"]	= default_2_position_tumb(_("Centrale Gyroscopique, ON/OFF"), devices.GYRO_SYSTEM, device_commands.Button_1, 286)
 elements["PTR-PNL-T-HRZSEC"]	= default_2_position_tumb(_("Horizon Secours, ON/OFF"), devices.GYRO_SYSTEM, device_commands.Button_2, 287)
 elements["PTR-PNL-T-ELECTROPUMP"]	= default_2_position_tumb(_("Electropompe, ON/OFF"), devices.HYDRAULIC_SYSTEM, device_commands.Button_10, 288)
@@ -329,7 +329,7 @@ elements["PTR-ALM-T-GENED"]	= default_2_position_tumb(_("Right Generator"), devi
 elements["PTR-ALM-T-CONV1"]	= default_2_position_tumb(_("Left Inverter"), devices.ELECTRIC_SYSTEM, device_commands.Button_14, 292)
 elements["PTR-ALM-T-CONV2"]	= default_2_position_tumb(_("Right Inverter"), devices.ELECTRIC_SYSTEM, device_commands.Button_15, 293)
 elements["PTR-ALM-T-CRASHBAR"]	= default_2_position_tumb(_("Crash Bar"), devices.ELECTRIC_SYSTEM, device_commands.Button_16, 315)
-elements["PTR-T-LIGHTEST"]		= default_button(_("Warning Light Test"),devices.ELECTRIC_SYSTEM,device_commands.Button_17,294)
+elements["PNT_051"]		= default_button(_("Warning Light Test"),devices.ELECTRIC_SYSTEM,device_commands.Button_17,251)
 
 elements["PTR-T-DELESTAGE"]		= default_2_position_tumb(_("Delestage"),devices.ELECTRIC_SYSTEM,device_commands.Button_18,316)
 
