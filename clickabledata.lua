@@ -284,7 +284,7 @@ elements["PNT_020"] = default_button("Gear Up",devices.COMMANDS, device_commands
 
 -- Altimeter Setting
 --elements["SET-PRESSURE"] = { class = {class_type.LEV}, hint = "Set Altimeter", device = devices.ALTIMETER, action = {device_commands.Button_1}, arg = {8}, arg_value = {0.5}, arg_lim = {{0.0, 1.0}} } 
-elements["PNT-ALT-LEVR"] = default_axis(_("Set Pressure"),devices.ALTIMETER, device_commands.Button_2, 300, 0.04, 1, false, true)
+elements["PNT_046"] = default_axis(_("Set Pressure"),devices.ALTIMETER, device_commands.Button_2, 300, 0.04, 1, false, true)
 -- IAS Index Setting
 --elements["PNT-IAS-LEVR"] = default_axis(_("Set IAS Index"),devices.ALTIMETER, device_commands.Button_3, 301, 0.04, 1, false, true)
 -- HDG Index Setting
