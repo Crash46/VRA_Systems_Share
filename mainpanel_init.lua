@@ -181,19 +181,57 @@ HrzPitch.input						= {-math.pi, math.pi}
 HrzPitch.output						= {1.0, -1.00}
 HrzPitch.controller					= controllers.base_gauge_Pitch
 
+
+-------------------------------------------------------------
+-----------------------Altimeter-------------------------
+------------------------------------------------------------
 --100 ft needle
 Alt_100ft_Gauge               		= CreateGauge("parameter")
-Alt_100ft_Gauge.parameter_name   	= "Alt100FTVRA"
+Alt_100ft_Gauge.parameter_name   	= "Alt100"
 Alt_100ft_Gauge.arg_number     		= 18
 Alt_100ft_Gauge.input          		= {0.0, 1000}
 Alt_100ft_Gauge.output         		= {0.0, 1}
 
 --1000 ft needle
 Alt_1000ft_Gauge               		= CreateGauge("parameter")
-Alt_1000ft_Gauge.parameter_name   	= "Alt1000FTVRA"
+Alt_1000ft_Gauge.parameter_name   	= "Alt1000"
 Alt_1000ft_Gauge.arg_number    		= 19
 Alt_1000ft_Gauge.input         		= {0.0, 10000}
 Alt_1000ft_Gauge.output        		= {0.0, 1.0}
+
+--10000 ft gauge
+Alt_10000ft_Gauge 			  		 = CreateGauge("parameter")
+Alt_10000ft_Gauge.parameter_name   	 = "Alt10000"
+Alt_10000ft_Gauge.arg_number    	 = 57
+Alt_10000ft_Gauge.input    		 	 = {0.0,100000} 
+Alt_10000ft_Gauge.output    		 = {0.0,1.0}
+
+
+Alt_Baro_Press_1000_Gauge					= CreateGauge("parameter")
+Alt_Baro_Press_1000_Gauge.parameter_name 	= "Baro_Press_1000"
+Alt_Baro_Press_1000_Gauge.arg_number		= 61
+Alt_Baro_Press_1000_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_1000_Gauge.output 			= {0.0, 1.0}
+
+Alt_Baro_Press_0100_Gauge					= CreateGauge("parameter")
+Alt_Baro_Press_0100_Gauge.parameter_name 	= "Baro_Press_0100"
+Alt_Baro_Press_0100_Gauge.arg_number		= 62
+Alt_Baro_Press_0100_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0100_Gauge.output 			= {0.0, 1.0}
+
+Alt_Baro_Press_0010_Gauge					= CreateGauge("parameter")
+Alt_Baro_Press_0010_Gauge.parameter_name 	= "Baro_Press_0010"
+Alt_Baro_Press_0010_Gauge.arg_number		= 63
+Alt_Baro_Press_0010_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0010_Gauge.output 			= {0.0, 1.0}
+
+Alt_Baro_Press_0001_Gauge					= CreateGauge("parameter")
+Alt_Baro_Press_0001_Gauge.parameter_name 	= "Baro_Press_0001"
+Alt_Baro_Press_0001_Gauge.arg_number		= 64
+Alt_Baro_Press_0001_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0001_Gauge.output 			= {0.0, 1.0}
+
+
 
 CompassRose							= CreateGauge()  
 CompassRose.arg_number				= 28
@@ -249,11 +287,6 @@ Pi_HYD2.arg_number    	 			= 56
 Pi_HYD2.input    		 			= {0.0,30} 
 Pi_HYD2.output    		  			= {0.0,0.3}
 
-L_10K     			  				= CreateGauge("parameter")
-L_10K.parameter_name   				= "Alt10000FTVRA"
-L_10K.arg_number    	 			= 57
-L_10K.input    		 				= {0.0,100000} 
-L_10K.output    		  			= {0.0,1.0}
 
 FLAPS      			  				= CreateGauge("parameter")
 FLAPS.parameter_name   				= "flaps_status"
