@@ -7,124 +7,79 @@ local update_time_step = 0.05
 make_default_activity(update_time_step)
 --update will be called 50 times per second
 
-local AnimationPpress_adjIncDt      = 0.2
-local AnimationAltimIncDec          = update_time_step / 0.05
 
 local Alt10000 = get_param_handle("Alt10000")
 local Alt1000  = get_param_handle("Alt1000")
 local Alt100   = get_param_handle("Alt100")
 
-local Baro_Adj = 3002
+-- add barometric pressure adjustment know
+local Baro_Adj_Knob = 3002
+
+-- TODO: add the rest of the numbers once this one is working
+local Baro_Press_1000 = get_param_handle("Baro_Press_1000")
+local Baro_Press_0100 = get_param_handle("Baro_Press_1000")
+local Baro_Press_0010 = get_param_handle("Baro_Press_1000")
 local Baro_Press_0001 = get_param_handle("Baro_Press_0001")
 
+
+local ALT_PRESSURE_MAX = 30.99 -- in Hg
+local ALT_PRESSURE_MIN = 29.10 -- in Hg
+local ALT_PRESSURE_STD = 29.92 -- in Hg
+
+
+local altimeter_setting = ALT_PRESSURE_STD
 
 dev:listen_command(Baro_Adj)
 
 Alt100:set(0)
 Alt1000:set(0)
 Alt10000:set(0)
-
+Baro_Press_1000:set(0)
+Baro_Press_0100:set(0)
+Baro_Press_0010:set(0)
 Baro_Press_0001:set(0)
-Pressure = 0 
-Altitude = 0
-local Baro_Adj_left = false --barometric adjustment switch centered
-local Baro_Adj_right = false --barometric adjustment switch centered
-Minimum_Pressure = 950
-Maximum_Pressure = 1050
-
-
-------------------------
--- Reference
-------------------------
---local ALT_PRESSURE_MAX = 30.99 -- in Hg
---local ALT_PRESSURE_MIN = 29.10 -- in Hg
---local ALT_PRESSURE_STD = 29.92 -- in Hg
-
---local alt_needle = get_param_handle("D_ALT_NEEDLE") -- 0 to 1000
---local alt_10k = get_param_handle("D_ALT_10K") -- 0 to 100,000
---local alt_1k = get_param_handle("D_ALT_1K") -- 0 to 10,000
---local alt_100s = get_param_handle("D_ALT_100S") -- 0 to 1000
---local alt_adj_NNxx = get_param_handle("ALT_ADJ_NNxx") -- first digits, 29-30 is input
---local alt_adj_xxNx = get_param_handle("ALT_ADJ_xxNx") -- 3rd digit, 0-10 input
---local alt_adj_xxxN = get_param_handle("ALT_ADJ_xxxN") -- 4th digit, 0-10 input
-
---local alt_setting = ALT_PRESSURE_STD
-
-------------------------
 
 
 function post_initialize()
-    
+
 end
 
 function SetCommand(command,value)	
-
-	--Rotate barometric adjustment switch right	
-	if command == Baro_Adj > 0 then
-		Baro_Adj_right = true
-	end
-
-	--Rotate barometric adjustment switch left
-	if command == Baro_Adj > 0 then
-		Baro_Adj_left = true
-	end
+	-- TODO: need to adjust the rate of spinning
+	if command == Baro_Adj_Knob then
+		altimeter_setting = altimeter_setting+ ((value / 0.05)*0.02)
+		if altimeter_setting >= ALT_PRESSURE_MAX then
+			altimeter_setting = ALT_PRESSURE_MAX
+		elseif altimeter_setting <= ALT_PRESSURE_MIN then
+			altimeter_setting = ALT_PRESSURE_MIN
+		end
+	end	
 end
 
 function update()
 	
 	update_altimeter()
-	update_barometric_pressure()
 	
 end
 
 function update_altimeter()
-	local Altitude = sensor_data.getBarometricAltitude()*feet_per_meter
+	local altitude = sensor_data.getBarometricAltitude()*feet_per_meter
 	
-	Alt100:set((Altitude) % 1000)
-	Alt1000:set((Altitude)% 10000)
-	Alt10000:set(Altitude)
-end
+	local Baro1000 = math.floor(altimeter_setting)
+	local Baro0100 = math.floor(altimeter_setting) % 10
+	local Baro0010 = math.floor(altimeter_setting*10) % 10
+	local Baro0001 = math.floor(altimeter_setting*100) % 10
 
-function update_barometric_pressure()
+	Baro_Press_1000:set(Baro1000)
+	Baro_Press_0100:set(Baro0100)
+	Baro_Press_0010:set(Baro0010)
+	Baro_Press_0001:set(Baro0001)
 
-	if Baro_Adj_right then
-		Pressure = Pressure - AnimationPpress_adjIncDt
-		Baro_Adj_right = false
-		if Pressure < Minimum_Pressure then
-			Pressure = Minimum_Pressure
-		end
-	end
+	-- based on the barometric setting, adjust the displayed altitude
+	local altitude_adjusted = (altimeter_setting - ALT_PRESSURE_STD)* 1000 -- 1000 feet per inHg / 10 feet per .01 in Hg
 
-
-	if Baro_Adj_left then
-		Pressure = Pressure + AnimationPpress_adjIncDt
-		Baro_Adj_left = false
-		if Pressure > Maximum_Pressure then
-			Pressure = Maximum_Pressure
-		end
-	end
+	Alt100:set((altitude + altitude_adjusted) % 1000)
+	Alt1000:set((altitude + altitude_adjusted)% 10000)
+	Alt10000:set(altitude + altitude_adjusted)
 
 end
-
-
---function update_altimeter()
-    -- altimeter
-    --local alt = sensor_data.getBarometricAltitude()*meters_to_feet
-
-    --local altNNxx = math.floor(alt_setting)         -- for now just make it discrete
-    --local altxxNx = math.floor(alt_setting*10) % 10
-    --local altxxxN = math.floor(alt_setting*100) % 10
-
-    -- first update the selected setting value displayed
-    --alt_adj_NNxx:set(altNNxx)
-    --alt_adj_xxNx:set(altxxNx)
-    --alt_adj_xxxN:set(altxxxN)
-
-    -- based on setting, adjust displayed altitude
-    --local alt_adj = (alt_setting - ALT_PRESSURE_STD)*1000   -- 1000 feet per inHg / 10 feet per .01 inHg -- if we set higher pressure than actual => altimeter reads higher
-
-    --alt_10k:set((alt+alt_adj) % 100000)
-    --alt_1k:set((alt+alt_adj) % 10000)
-    --alt_100s:set((alt+alt_adj) % 1000)
-    --alt_needle:set((alt+alt_adj) % 1000)
---end
