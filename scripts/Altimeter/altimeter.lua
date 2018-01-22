@@ -47,7 +47,7 @@ end
 function SetCommand(command,value)	
 	-- TODO: need to adjust the rate of spinning
 	if command == Baro_Adj_Knob then
-		altimeter_setting = altimeter_setting+ ((value / 0.05)*0.02)
+		altimeter_setting = altimeter_setting+ ((value / 0.05)*0.001)
 		if altimeter_setting >= ALT_PRESSURE_MAX then -- If the pressure set is higher than the maximum allowed, set the altimeter setting to correspond to the maximum pressure
 			altimeter_setting = ALT_PRESSURE_MAX 
 		elseif altimeter_setting <= ALT_PRESSURE_MIN then -- Same as above but for the minimum pressure
