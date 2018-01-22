@@ -47,7 +47,7 @@ end
 function SetCommand(command,value)	
 	-- TODO: need to adjust the rate of spinning
 	if command == Baro_Adj_Knob then
-		altimeter_setting = altimeter_setting+ ((value / 0.05)*0.001)
+		altimeter_setting = altimeter_setting + ((value / 0.05)*0.001)
 		if altimeter_setting >= ALT_PRESSURE_MAX then -- If the pressure set is higher than the maximum allowed, set the altimeter setting to correspond to the maximum pressure
 			altimeter_setting = ALT_PRESSURE_MAX 
 		elseif altimeter_setting <= ALT_PRESSURE_MIN then -- Same as above but for the minimum pressure
@@ -59,6 +59,11 @@ end
 function update()
 	
 	update_altimeter()
+
+	Baro_Press_0001:set(Baro0001)
+	Baro_Press_0010:set(Baro0010)
+	Baro_Press_0100:set(Baro0100)
+	Baro_Press_1000:set(Baro1000)
 	
 end
 
@@ -68,15 +73,17 @@ function update_altimeter()
 	local altitude = sensor_data.getBarometricAltitude()*feet_per_meter
 	
 	-- Barometric pressure animation
-	local Baro1000 = math.floor(altimeter_setting)
-	local Baro0100 = math.floor(altimeter_setting) % 10
-	local Baro0010 = math.floor(altimeter_setting*10) % 10
-	local Baro0001 = math.floor(altimeter_setting*100) % 10
+	local mPressure = altimeter_setting * 33.86
 
-	Baro_Press_1000:set(Baro1000)
-	Baro_Press_0100:set(Baro0100)
-	Baro_Press_0010:set(Baro0010)
-	Baro_Press_0001:set(Baro0001)
+    local Baro1000 = (mPressure)/1000
+    local Baro0100 = ((mPressure/100)-math.floor(Baro1000*10))  
+    local Baro0010 = ((mPressure/10)-(math.floor(Baro1000)*100)-(math.floor(Baro0100)*10))
+    local Baro0001 = (mPressure-(math.floor(Baro1000)*1000)-(math.floor(Baro0100)*100)-(math.floor(Baro0010)*10))
+
+		
+
+	--print_message_to_user(mPressure)
+	print_message_to_user(Baro0010)
 
 	-- based on the barometric setting, adjust the displayed altitude
 	local altitude_adjusted = (altimeter_setting - ALT_PRESSURE_STD)* 1000 -- 1000 feet per inHg / 10 feet per .01 in Hg
