@@ -210,25 +210,25 @@ Alt_10000ft_Gauge.output    		 = {0.0,1.0}
 Alt_Baro_Press_1000_Gauge					= CreateGauge("parameter")
 Alt_Baro_Press_1000_Gauge.parameter_name 	= "Baro_Press_1000"
 Alt_Baro_Press_1000_Gauge.arg_number		= 61
-Alt_Baro_Press_1000_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_1000_Gauge.input 			= {0.0, 10.0}
 Alt_Baro_Press_1000_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0100_Gauge					= CreateGauge("parameter")
 Alt_Baro_Press_0100_Gauge.parameter_name 	= "Baro_Press_0100"
 Alt_Baro_Press_0100_Gauge.arg_number		= 62
-Alt_Baro_Press_0100_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0100_Gauge.input 			= {0.0, 10.0}
 Alt_Baro_Press_0100_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0010_Gauge					= CreateGauge("parameter")
 Alt_Baro_Press_0010_Gauge.parameter_name 	= "Baro_Press_0010"
 Alt_Baro_Press_0010_Gauge.arg_number		= 63
-Alt_Baro_Press_0010_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0010_Gauge.input 			= {0.0, 10.0}
 Alt_Baro_Press_0010_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0001_Gauge					= CreateGauge("parameter")
 Alt_Baro_Press_0001_Gauge.parameter_name 	= "Baro_Press_0001"
 Alt_Baro_Press_0001_Gauge.arg_number		= 64
-Alt_Baro_Press_0001_Gauge.input 			= {0.0, 1.0}
+Alt_Baro_Press_0001_Gauge.input 			= {0.0, 10.0}
 Alt_Baro_Press_0001_Gauge.output 			= {0.0, 1.0}
 
 
