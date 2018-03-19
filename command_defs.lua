@@ -68,7 +68,9 @@ device_commands =
 	Button_36 = start_command + 36;
 	Button_37 = start_command + 37;
 	Button_38 = start_command + 38;
-	Button_39 = start_command + 39;
+	
+	Button_39 = start_command + 39; --HSI Course Set
+	
 	Button_40 = start_command + 40;
 	Button_41 = start_command + 41;
 	Button_42 = start_command + 42;
@@ -222,5 +224,7 @@ Button_198	=	start_command	+	198;
 Button_199	=	start_command	+	199;
 Button_200	=	start_command	+	200;
 Button_201	=	start_command	+	201;
+
+Button_406	=	start_command	+	406;
 
 }

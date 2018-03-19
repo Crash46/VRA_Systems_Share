@@ -274,6 +274,7 @@ elements["PNT_016"] = default_button("Flaps Up",devices.COMMANDS, device_command
 elements["PNT_017"] = default_button("Flaps Mid",devices.COMMANDS, device_commands.Button_2,201)
 elements["PNT_018"] = default_button("Flaps Full Down",devices.COMMANDS, device_commands.Button_3,203)
 
+
 --SwitchOFF elements["POINTER"] = default_2_position_tumb(LOCALIZE("Test Command"),devices.TEST, device_commands.Button_1,444) -- 44 arg number
 elements["PNT_019"] = default_button("Gear Down",devices.COMMANDS, device_commands.Button_4,219)
 elements["PNT_020"] = default_button("Gear Up",devices.COMMANDS, device_commands.Button_5,220)
@@ -288,7 +289,7 @@ elements["PNT_046"] = default_axis(_("Set Pressure"),devices.ALTIMETER, device_c
 -- IAS Index Setting
 --elements["PNT-IAS-LEVR"] = default_axis(_("Set IAS Index"),devices.ALTIMETER, device_commands.Button_3, 301, 0.04, 1, false, true)
 -- HDG Index Setting
-elements["PNT-HDG-LEVR"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_4, 304, 0.02, 1, false, true)
+--elements["PNT-HDG-LEVR"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_4, 304, 0.02, 1, false, true)
 -- HRZ Secours Index Setting
 elements["PNT-HRZSEC-LVR"] = default_axis(_("Reset Standby Horizon"),devices.ALTIMETER, device_commands.Button_5, 305, 0.04, 1, false, true)
 -- Horizon Index Setting
@@ -311,7 +312,9 @@ elements["PNT-PANEL-LT"] = default_axis(_("Panel Light Front"),devices.LIGHT_SYS
 
 
 -- Landing Light
-elements["PTR-LAND-LVR"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 311)
+--elements["PTR-LAND-LVR"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 311)
+elements["PNT_044"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 244)
+
 
 elements["PTR-T-ALARME"]		= default_3_position_tumb(_("High Alpha Alarm, HIDRAG/OFF/LOWDRAG"), devices.LIGHT_SYSTEM, device_commands.Button_5, 295)
 
@@ -355,6 +358,12 @@ elements["PNT-CACHE-HRZ"]	= default_2_position_tumb(_("Hide/Show"), devices.GYRO
 -- Toggle side smoke system 
 elements["PNT-SWITCH-FUMI"]	= default_2_position_tumb(_("Right/Left"), devices.SYSTEMS, device_commands.Button_1, 317)
 
+-- STOPWATCH
+elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.CLOCK,device_commands.Button_406,406)
+
+-- HSI
+elements["PNT_039"] = default_axis(_("Set Course"),devices.ALTIMETER, device_commands.Button_39, 239, 0.02, 1, false, true)
+elements["PNT_038"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_38, 238, 0.02, 1, false, true)
 
 for i,o in pairs(elements) do
 	if  o.class[1] == class_type.TUMB or 

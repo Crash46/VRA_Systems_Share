@@ -90,8 +90,8 @@ Landinggearhandle.controller		= controllers.gear_handle_animation
 
 Engine_RPM_L						= CreateGauge()
 Engine_RPM_L.arg_number				= 16
-Engine_RPM_L.input					= {0.0, 110.0} 
-Engine_RPM_L.output					= {0.0, 1.1}
+Engine_RPM_L.input					= {0.0, 100.0} 
+Engine_RPM_L.output					= {0.0, 1.0}
 Engine_RPM_L.controller				= controllers.base_gauge_EngineLeftRPM
 
 Engine_FF_L							= CreateGauge("parameter")
@@ -106,11 +106,11 @@ Engine_TEMP_L.input					= {300, 900}
 Engine_TEMP_L.output				= {0.3, 0.9}
 Engine_TEMP_L.controller			= controllers.base_gauge_EngineLeftTemperatureBeforeTurbine
 
-Engine_RPM_R						= CreateGauge()
-Engine_RPM_R.arg_number				= 17
-Engine_RPM_R.input					= {0.0, 110.0} 
-Engine_RPM_R.output					= {0.0, 1.1}
-Engine_RPM_R.controller				= controllers.base_gauge_EngineRightRPM
+--Engine_RPM_R						= CreateGauge()
+--Engine_RPM_R.arg_number				= 17
+--Engine_RPM_R.input					= {0.0, 110.0} 
+--Engine_RPM_R.output					= {0.0, 1.1}
+--Engine_RPM_R.controller				= controllers.base_gauge_EngineRightRPM
 
 Engine_FF_R							= CreateGauge("parameter")
 Engine_FF_R.parameter_name   		= "D_FFR"
@@ -203,32 +203,32 @@ Alt_1000ft_Gauge.output        		= {0.0, 1.0}
 Alt_10000ft_Gauge 			  		 = CreateGauge("parameter")
 Alt_10000ft_Gauge.parameter_name   	 = "Alt10000"
 Alt_10000ft_Gauge.arg_number    	 = 57
-Alt_10000ft_Gauge.input    		 	 = {0.0,100000} 
-Alt_10000ft_Gauge.output    		 = {0.0,1.0}
+Alt_10000ft_Gauge.input    		 	 = {0.0,40000} 
+Alt_10000ft_Gauge.output    		 = {0.0,0.4}
 
 
 Alt_Baro_Press_1000_Gauge					= CreateGauge("parameter")
-Alt_Baro_Press_1000_Gauge.parameter_name 	= "Baro_Press_1000"
-Alt_Baro_Press_1000_Gauge.arg_number		= 61
-Alt_Baro_Press_1000_Gauge.input 			= {0.0, 10.0}
+Alt_Baro_Press_1000_Gauge.parameter_name 	= "Alt_Baro_Press_1000"
+Alt_Baro_Press_1000_Gauge.arg_number		= 73
+Alt_Baro_Press_1000_Gauge.input 			= {0.0, 10}
 Alt_Baro_Press_1000_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0100_Gauge					= CreateGauge("parameter")
-Alt_Baro_Press_0100_Gauge.parameter_name 	= "Baro_Press_0100"
-Alt_Baro_Press_0100_Gauge.arg_number		= 62
-Alt_Baro_Press_0100_Gauge.input 			= {0.0, 10.0}
+Alt_Baro_Press_0100_Gauge.parameter_name 	= "Alt_Baro_Press_0100"
+Alt_Baro_Press_0100_Gauge.arg_number		= 74
+Alt_Baro_Press_0100_Gauge.input 			= {0.0, 10}
 Alt_Baro_Press_0100_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0010_Gauge					= CreateGauge("parameter")
-Alt_Baro_Press_0010_Gauge.parameter_name 	= "Baro_Press_0010"
-Alt_Baro_Press_0010_Gauge.arg_number		= 63
-Alt_Baro_Press_0010_Gauge.input 			= {0.0, 10.0}
+Alt_Baro_Press_0010_Gauge.parameter_name 	= "Alt_Baro_Press_0010"
+Alt_Baro_Press_0010_Gauge.arg_number		= 75
+Alt_Baro_Press_0010_Gauge.input 			= {0.0, 10}
 Alt_Baro_Press_0010_Gauge.output 			= {0.0, 1.0}
 
 Alt_Baro_Press_0001_Gauge					= CreateGauge("parameter")
-Alt_Baro_Press_0001_Gauge.parameter_name 	= "Baro_Press_0001"
-Alt_Baro_Press_0001_Gauge.arg_number		= 64
-Alt_Baro_Press_0001_Gauge.input 			= {0.0, 10.0}
+Alt_Baro_Press_0001_Gauge.parameter_name 	= "Alt_Baro_Press_0001"
+Alt_Baro_Press_0001_Gauge.arg_number		= 76
+Alt_Baro_Press_0001_Gauge.input 			= {0.0, 10}
 Alt_Baro_Press_0001_Gauge.output 			= {0.0, 1.0}
 
 
