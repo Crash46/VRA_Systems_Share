@@ -151,17 +151,17 @@ Gload.input							= {-10.0, 10.0}
 Gload.output						= {-1.0, 1.00}
 Gload.controller					= controllers.base_gauge_VerticalAcceleration
 
-MaximG								= CreateGauge("parameter")
-MaximG.parameter_name   			= "MaxiG"
-MaximG.arg_number					= 71
-MaximG.input						= {-10.0, 10.0}
-MaximG.output						= {-1.0, 1.00}
+MaximG                              = CreateGauge("parameter")
+MaximG.parameter_name               = "MaxiG"
+MaximG.arg_number                   = 71
+MaximG.input                        = {0, 10}
+MaximG.output                       = {0, 1.0}
 
-MinimG								= CreateGauge("parameter")
-MinimG.parameter_name   			= "MiniG"
-MinimG.arg_number					= 72
-MinimG.input						= {-10.0, 10.0}
-MinimG.output						= {-1.0, 1.00}
+MinimG                              = CreateGauge("parameter")
+MinimG.parameter_name               = "MiniG"
+MinimG.arg_number                   = 72
+MinimG.input                        = {-4, 0}
+MinimG.output                       = {-0.4, 0}
 
 --AOA_Units							= CreateGauge("parameter")
 --AOA_Units.parameter_name   			= "D_AOA"
@@ -231,7 +231,23 @@ Alt_Baro_Press_0001_Gauge.arg_number		= 76
 Alt_Baro_Press_0001_Gauge.input 			= {0.0, 10}
 Alt_Baro_Press_0001_Gauge.output 			= {0.0, 1.0}
 
+------------------------------STOPWATCH-------------------------------------
+--add hours when ready
 
+StopwatchM									= CreateGauge("parameter")
+StopwatchM.arg_number						= 91
+StopwatchM.input							= {0,60}
+StopwatchM.output							= {0,1}
+StopwatchM.parameter_name 					= "StopwatchM"
+
+StopwatchS									= CreateGauge("parameter")
+StopwatchS.arg_number						= 90
+StopwatchS.input							= {0,60}
+StopwatchS.output							= {0,1}
+StopwatchS.parameter_name 					= "StopwatchS"
+
+
+----------------------------------------------------------------------------
 
 CompassRose							= CreateGauge()  
 CompassRose.arg_number				= 28

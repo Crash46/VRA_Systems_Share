@@ -266,7 +266,7 @@ elements = {}
 elements["PNT_073"]		= default_button(_("Reset 10000 ft"),devices.ALTIMETER,device_commands.Button_1,73)
 
 -- Gmeter reset
-elements["PNT_074"]		= default_button(_("Push to set G-meter"),devices.ACCELEROMETER,device_commands.Button_1,74)
+elements["PNT_108"]		= default_button(_("Push to set G-meter"),devices.ACCELEROMETER,device_commands.Button_1,308)
 
 -- Flaps
 -- elements["PNT_018"] = FCS_Tumb("Flaps Control", devices.AVIONICS, device_commands.Button_18, device_commands.Button_134,218) -- uses PNT_018 and PNT_134
@@ -345,7 +345,7 @@ elements["PTR-START-RENG"]	= default_3_position_tumb(_("Right Engine Start, STAR
 elements["PTR-START-BPG"]	= default_2_position_tumb(_("Low Pressure Pump, BPG"), devices.START_PANEL, device_commands.Button_22, 298)
 elements["PTR-START-BPD"]	= default_2_position_tumb(_("Low Pressure Pump, BPD"), devices.START_PANEL, device_commands.Button_23, 299)
 elements["PTR-START-COCKBPL"]	= default_2_position_tumb(_("Protective Cover, BPG"), devices.START_PANEL, device_commands.Button_24, 307)
-elements["PTR-START-COCKBPR"]	= default_2_position_tumb(_("Protective Cover, BPD"), devices.START_PANEL, device_commands.Button_25, 308)
+--elements["PTR-START-COCKBPR"]	= default_2_position_tumb(_("Protective Cover, BPD"), devices.START_PANEL, device_commands.Button_25, 308)
 elements["PTR-START-LFUELCUT"]	= default_2_position_tumb(_("Fuel Cutoff Left"), devices.START_PANEL, device_commands.Button_26, 309)
 elements["PTR-START-RFUELCUT"]	= default_2_position_tumb(_("Fuel Cutoff Right"), devices.START_PANEL, device_commands.Button_27, 310)
 
