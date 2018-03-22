@@ -296,8 +296,8 @@ elements["PNT-HRZSEC-LVR"] = default_axis(_("Reset Standby Horizon"),devices.ALT
 elements["PNT-HRZ-LVR"] = default_axis(_("Horizon Plane Set"),devices.ALTIMETER, device_commands.Button_6, 306, 0.04, 1, false, true)
 
 -- SIB VHF UHF
-elements["PNT-SIB-UHF"] = default_axis(_("UHF Volume"),devices.ALTIMETER, device_commands.Button_7, 302, 0.04, 1, false, true)
-elements["PNT-SIB-VHF"] = default_axis(_("VHF Volume"),devices.ALTIMETER, device_commands.Button_8, 303, 0.04, 1, false, true)
+--elements["PNT-SIB-UHF"] = default_axis(_("UHF Volume"),devices.ALTIMETER, device_commands.Button_7, 302, 0.04, 1, false, true)
+--elements["PNT-SIB-VHF"] = default_axis(_("VHF Volume"),devices.ALTIMETER, device_commands.Button_8, 303, 0.04, 1, false, true)
 
 --Light System Control Panel
 elements["PTR-LIGHT-NAV"]			= default_3_position_tumb(_("Navigation Lights, FLASH/OFF/STEADY"), devices.LIGHT_SYSTEM, device_commands.Button_1, 280)
@@ -364,6 +364,14 @@ elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.CL
 -- HSI
 elements["PNT_039"] = default_axis(_("Set Course"),devices.ALTIMETER, device_commands.Button_39, 239, 0.02, 1, false, true)
 elements["PNT_038"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_38, 238, 0.02, 1, false, true)
+
+-- UHF Radio
+elements["PNT_026"]= multiposition_switch("UHF Frequency Selector 1", devices.UHF, device_commands.Button_202, 226, 4, 0.25) 
+elements["PNT_027"]= multiposition_switch("UHF Frequency Selector 2", devices.UHF, device_commands.Button_203, 229, 10, 0.1) 
+elements["PNT_028"]= multiposition_switch("UHF Frequency Selector 3", devices.UHF, device_commands.Button_204, 228, 10, 0.1) 
+elements["PNT_029"]= multiposition_switch("UHF Frequency Selector 4", devices.UHF, device_commands.Button_205, 227, 10, 0.1) 
+elements["PNT_030"]= multiposition_switch("UHF Frequency Selector 5", devices.UHF, device_commands.Button_206, 230, 4, 0.25) 
+
 
 for i,o in pairs(elements) do
 	if  o.class[1] == class_type.TUMB or 

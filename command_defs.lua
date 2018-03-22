@@ -224,6 +224,11 @@ Button_198	=	start_command	+	198;
 Button_199	=	start_command	+	199;
 Button_200	=	start_command	+	200;
 Button_201	=	start_command	+	201;
+Button_202	=	start_command	+	202; --UHF
+Button_203	=	start_command	+	203; --UHF
+Button_204	=	start_command	+	204; --UHF
+Button_205	=	start_command	+	205; --UHF
+Button_206	=	start_command	+	206; --UHF
 
 Button_406	=	start_command	+	406;
 

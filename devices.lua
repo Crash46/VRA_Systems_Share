@@ -25,3 +25,4 @@ devices["GYRO_SYSTEM"]				= counter()--14
 devices["START_PANEL"]				= counter()--15
 devices["SMOKES"]                   = counter()
 devices["COMMAND_SMOKES"]           = counter()
+devices["UHF"]	        			= counter()

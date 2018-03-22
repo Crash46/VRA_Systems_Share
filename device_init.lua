@@ -47,6 +47,7 @@ creators[devices.GYRO_SYSTEM]		= {"avLuaDevice"		,LockOn_Options.script_path.."s
 creators[devices.START_PANEL]		= {"avLuaDevice"		,LockOn_Options.script_path.."scripts/Systems/start_panel.lua"}
 creators[devices.SMOKES]            = {"avLuaDevice"        ,LockOn_Options.script_path.."Smokes.lua"}
 creators[devices.COMMAND_SMOKES]    = {"avSimpleWeaponSystem"  ,LockOn_Options.script_path.."../bin/BAE.dll"}
+creators[devices.UHF]				= {"avLuaDevice"		,LockOn_Options.script_path.."scripts/Systems/UHF_radio.lua"}
 
 
 --RADAR OFF creators[devices.RADAR]			 = {"avSimpleRadar"			,LockOn_Options.script_path.."RADAR/Device/init.lua"}
