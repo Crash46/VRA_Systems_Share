@@ -367,10 +367,14 @@ elements["PNT_038"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, devic
 
 -- UHF Radio
 elements["PNT_026"]= multiposition_switch("UHF Frequency Selector 1", devices.UHF, device_commands.Button_202, 226, 4, 0.25) 
-elements["PNT_027"]= multiposition_switch("UHF Frequency Selector 2", devices.UHF, device_commands.Button_203, 229, 10, 0.1) 
-elements["PNT_028"]= multiposition_switch("UHF Frequency Selector 3", devices.UHF, device_commands.Button_204, 228, 10, 0.1) 
-elements["PNT_029"]= multiposition_switch("UHF Frequency Selector 4", devices.UHF, device_commands.Button_205, 227, 10, 0.1) 
+elements["PNT_027"]= multiposition_switch("UHF Frequency Selector 2", devices.UHF, device_commands.Button_203, 410, 10, 0.1) 
+elements["PNT_028"]= multiposition_switch("UHF Frequency Selector 3", devices.UHF, device_commands.Button_204, 236, 10, 0.1) 
+elements["PNT_029"]= multiposition_switch("UHF Frequency Selector 4", devices.UHF, device_commands.Button_205, 411, 10, 0.1) 
 elements["PNT_030"]= multiposition_switch("UHF Frequency Selector 5", devices.UHF, device_commands.Button_206, 230, 4, 0.25) 
+elements["PNT_035"]= multiposition_switch("UHF Channel Preset", devices.UHF, device_commands.Button_207, 412, 24, 0.04) 
+elements["PNT_021"]= multiposition_switch("UHF Mode Selector", devices.UHF, device_commands.Button_208, 221, 4, 0.25) 
+elements["PNT_025"]= multiposition_switch("UHF Mode Selector 2", devices.UHF, device_commands.Button_209, 413, 3, 0.5)
+elements["PNT_024"]	= default_2_position_tumb(_("UHF Squelch"), devices.UHF, device_commands.Button_210, 224) 
 
 
 for i,o in pairs(elements) do
