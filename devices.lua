@@ -23,6 +23,7 @@ devices["LIGHT_SYSTEM"]				= counter()--12
 devices["FUEL_SYSTEM"]				= counter()--13
 devices["GYRO_SYSTEM"]				= counter()--14
 devices["START_PANEL"]				= counter()--15
+devices["STOPWATCH"]				= counter()
 devices["SMOKES"]                   = counter()
 devices["COMMAND_SMOKES"]           = counter()
 devices["UHF"]	        			= counter()

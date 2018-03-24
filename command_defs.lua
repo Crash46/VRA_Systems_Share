@@ -234,6 +234,6 @@ Button_208	=	start_command	+	208; --UHF
 Button_209	=	start_command	+	209; --UHF
 Button_210	=	start_command	+	210; --UHF
 
-Button_406	=	start_command	+	406;
+Button_406	=	start_command	+	406; -- stopwatch
 
 }

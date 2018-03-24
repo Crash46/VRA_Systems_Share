@@ -359,7 +359,7 @@ elements["PNT-CACHE-HRZ"]	= default_2_position_tumb(_("Hide/Show"), devices.GYRO
 elements["PNT-SWITCH-FUMI"]	= default_2_position_tumb(_("Right/Left"), devices.SYSTEMS, device_commands.Button_1, 317)
 
 -- STOPWATCH
-elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.CLOCK,device_commands.Button_406,406)
+elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.STOPWATCH,device_commands.Button_406,406)
 
 -- HSI
 elements["PNT_039"] = default_axis(_("Set Course"),devices.ALTIMETER, device_commands.Button_39, 239, 0.02, 1, false, true)
