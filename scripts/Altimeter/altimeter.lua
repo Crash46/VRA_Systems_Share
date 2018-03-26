@@ -1,5 +1,5 @@
 local dev 	    = GetSelf()
-local update_time_step = 0.05
+local update_time_step = 0.01
 make_default_activity(update_time_step) --update will be called 50 times per second
 
 local sensor_data = get_base_data()
@@ -45,9 +45,6 @@ Baro_Press_0010:set(0)
 Baro_Press_0100:set(0)
 Baro_Press_1000:set(0)
 
-function post_initialize()
-
-end
 
 function SetCommand(command,value)	
 	if command == Baro_Adj_Knob then
