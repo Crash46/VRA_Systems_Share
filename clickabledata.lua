@@ -270,9 +270,11 @@ elements["PNT_108"]		= default_button(_("Push to set G-meter"),devices.ACCELEROM
 
 -- Flaps
 -- elements["PNT_018"] = FCS_Tumb("Flaps Control", devices.AVIONICS, device_commands.Button_18, device_commands.Button_134,218) -- uses PNT_018 and PNT_134
-elements["PNT_016"] = default_button("Flaps Up",devices.COMMANDS, device_commands.Button_1,200)
-elements["PNT_017"] = default_button("Flaps Mid",devices.COMMANDS, device_commands.Button_2,201)
-elements["PNT_018"] = default_button("Flaps Full Down",devices.COMMANDS, device_commands.Button_3,203)
+--elements["PNT_016"] = default_button("Flaps Up",devices.COMMANDS, device_commands.Button_1,200)
+--elements["PNT_017"] = default_button("Flaps Mid",devices.COMMANDS, device_commands.Button_2,201)
+--elements["PNT_018"] = default_button("Flaps Full Down",devices.COMMANDS, device_commands.Button_3,203)
+
+elements["PNT_018"]		= default_3_position_tumb(_("Flaps selection (Up/Mid/Down)"), devices.COMMANDS, device_commands.Button_211, 218)
 
 
 --SwitchOFF elements["POINTER"] = default_2_position_tumb(LOCALIZE("Test Command"),devices.TEST, device_commands.Button_1,444) -- 44 arg number

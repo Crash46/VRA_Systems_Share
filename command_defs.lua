@@ -233,6 +233,7 @@ Button_207	=	start_command	+	207; --UHF
 Button_208	=	start_command	+	208; --UHF
 Button_209	=	start_command	+	209; --UHF
 Button_210	=	start_command	+	210; --UHF
+Button_211	=	start_command	+	211; --FLAPS SELECTION SWITCH
 
 Button_406	=	start_command	+	406; -- stopwatch
 
