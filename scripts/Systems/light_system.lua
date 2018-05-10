@@ -131,7 +131,7 @@ function update()
 	set_aircraft_draw_argument_value(201,FormLightSwitchIsOn)
 	
 	set_aircraft_draw_argument_value(209,LandLightSwitchIsOn)
-	set_aircraft_draw_argument_value(130,LandLightSwitchIsOn)
+	--set_aircraft_draw_argument_value(130,LandLightSwitchIsOn)
 	
 	
 end

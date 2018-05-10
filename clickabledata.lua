@@ -317,7 +317,7 @@ elements["PNT_059"] = default_axis(_("Panel Light Port"),devices.LIGHT_SYSTEM, d
 
 -- Landing Light
 --elements["PTR-LAND-LVR"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 311)
-elements["PNT_044"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 244)
+elements["PNT_044"]		= default_2_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 244)
 
 
 elements["PTR-T-ALARME"]		= default_3_position_tumb(_("High Alpha Alarm, HIDRAG/OFF/LOWDRAG"), devices.LIGHT_SYSTEM, device_commands.Button_5, 295)
