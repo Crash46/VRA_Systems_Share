@@ -308,8 +308,10 @@ elements["PTR-LIGHT-INTENS"]		= default_2_position_tumb(_("Intensity, STRONG/LOW
 elements["PTR-LIGHT-ANTICOLLISION"]	= default_2_position_tumb(_("Anticollision Lights, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_4, 283)
 
 
---added by jph:
-elements["PNT-PANEL-LT"] = default_axis(_("Panel Light Front"),devices.LIGHT_SYSTEM, device_commands.Button_201, 501, 0.02, 1, false, true)
+--Flood Lights:
+elements["PNT_058"] = default_axis(_("Panel Light Front"),devices.LIGHT_SYSTEM, device_commands.Button_184, 258, 0.02, 0.2, false, false)
+elements["PNT_057"] = default_axis(_("Panel Light Starboard"),devices.LIGHT_SYSTEM, device_commands.Button_185, 257, 0.02, 0.2, false, false)
+elements["PNT_059"] = default_axis(_("Panel Light Port"),devices.LIGHT_SYSTEM, device_commands.Button_186, 259, 0.02, 0.2, false, false)
 --
 
 
@@ -364,8 +366,8 @@ elements["PNT-SWITCH-FUMI"]	= default_2_position_tumb(_("Right/Left"), devices.S
 elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.STOPWATCH,device_commands.Button_406,3406)
 
 -- HSI
-elements["PNT_039"] = default_axis(_("Set Course"),devices.ALTIMETER, device_commands.Button_39, 239, 0.02, 1, false, true)
-elements["PNT_038"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_38, 238, 0.02, 1, false, true)
+elements["PNT_039"] = default_axis(_("Set Course"),devices.ALTIMETER, device_commands.Button_39, 239, 0.02, 0.1, false, true)
+elements["PNT_038"] = default_axis(_("Set Heading Bug"),devices.ALTIMETER, device_commands.Button_38, 238, 0.02, 0.1, false, true)
 
 -- UHF Radio
 elements["PNT_026"]= multiposition_switch("UHF Frequency Selector 1", devices.UHF, device_commands.Button_202, 226, 4, 0.25) 
