@@ -295,7 +295,7 @@ elements["PNT_046"] = default_axis(_("Set Pressure"),devices.ALTIMETER, device_c
 -- HRZ Secours Index Setting
 elements["PNT-HRZSEC-LVR"] = default_axis(_("Reset Standby Horizon"),devices.ALTIMETER, device_commands.Button_5, 305, 0.04, 1, false, true)
 -- Horizon Index Setting
-elements["PNT-HRZ-LVR"] = default_axis(_("Horizon Plane Set"),devices.ALTIMETER, device_commands.Button_6, 306, 0.04, 1, false, true)
+--elements["PNT-HRZ-LVR"] = default_axis(_("Horizon Plane Set"),devices.ALTIMETER, device_commands.Button_6, 306, 0.04, 1, false, true)
 
 -- SIB VHF UHF
 --elements["PNT-SIB-UHF"] = default_axis(_("UHF Volume"),devices.ALTIMETER, device_commands.Button_7, 302, 0.04, 1, false, true)
@@ -318,6 +318,7 @@ elements["PNT_059"] = default_axis(_("Panel Light Port"),devices.LIGHT_SYSTEM, d
 -- Landing Light
 --elements["PTR-LAND-LVR"]		= default_3_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 311)
 elements["PNT_044"]		= default_2_position_tumb(_("Lights, OFF/TAXI/LANDING"), devices.LIGHT_SYSTEM, device_commands.Button_6, 244)
+elements["PNT_052"]		= default_2_position_tumb(_("Nav lights ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_212, 252)
 
 
 elements["PTR-T-ALARME"]		= default_3_position_tumb(_("High Alpha Alarm, HIDRAG/OFF/LOWDRAG"), devices.LIGHT_SYSTEM, device_commands.Button_5, 295)
@@ -325,7 +326,7 @@ elements["PTR-T-ALARME"]		= default_3_position_tumb(_("High Alpha Alarm, HIDRAG/
 --Front Switch Control Panel
 elements["PTR-PNL-T-SON"]	= default_2_position_tumb(_("Alarme Sonore, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_7, 284)
 elements["PNT_004"]	= default_2_position_tumb(_("Pitot Heat, ON/OFF"), devices.LIGHT_SYSTEM, device_commands.Button_8, 204)
-elements["PTR-PNL-T-CENTGYRO"]	= default_2_position_tumb(_("Centrale Gyroscopique, ON/OFF"), devices.GYRO_SYSTEM, device_commands.Button_1, 286)
+--elements["PTR-PNL-T-CENTGYRO"]	= default_2_position_tumb(_("Centrale Gyroscopique, ON/OFF"), devices.GYRO_SYSTEM, device_commands.Button_1, 286)
 elements["PTR-PNL-T-HRZSEC"]	= default_2_position_tumb(_("Horizon Secours, ON/OFF"), devices.GYRO_SYSTEM, device_commands.Button_2, 287)
 elements["PTR-PNL-T-ELECTROPUMP"]	= default_2_position_tumb(_("Electropompe, ON/OFF"), devices.HYDRAULIC_SYSTEM, device_commands.Button_10, 288)
 
@@ -360,7 +361,7 @@ elements["PTR-OXYG-OPENCLOSE"]	= default_2_position_tumb(_("Open/Close"), device
 -- Cache Horizon
 elements["PNT-CACHE-HRZ"]	= default_2_position_tumb(_("Hide/Show"), devices.GYRO_SYSTEM, device_commands.Button_3, 314)
 -- Toggle side smoke system 
-elements["PNT-SWITCH-FUMI"]	= default_2_position_tumb(_("Right/Left"), devices.SYSTEMS, device_commands.Button_1, 317)
+--elements["PNT-SWITCH-FUMI"]	= default_2_position_tumb(_("Right/Left"), devices.SYSTEMS, device_commands.Button_1, 317)
 
 -- STOPWATCH
 elements["PNT_178"]		= default_button(_("Stopwatch Start/Stop/Reset"),devices.STOPWATCH,device_commands.Button_406,3406)

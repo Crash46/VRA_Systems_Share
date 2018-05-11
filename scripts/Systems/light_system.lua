@@ -11,12 +11,12 @@ local T_FORMLIGHT = get_param_handle("T_FORMLIGHT")
 local T_LANDINGLIGHT = get_param_handle("T_LANDINGLIGHT")
 local PANEL_LIGHT_FRONT = get_param_handle("PANEL-LIGHT-FRONT")
 
-local NavLight = 3001
+local NavLight = 3212
 local StrobeLight  = 3004 -- This is the number of the command from command_defs
 local FormationLight = 3002
 local LandingLight = 3006
 
-local NavLightSwitch = 3001
+local NavLightSwitch = 3212
 local StrobeLightSwitch = 502
 local FormLightSwitch = 503
 local LandLightSwitch = 504
@@ -119,9 +119,9 @@ function update()
 		T_LANDINGLIGHT:set(0)
 	end
 		
-	set_aircraft_draw_argument_value(190,NavLightSwitchIsOn)
 	set_aircraft_draw_argument_value(191,NavLightSwitchIsOn)
-	set_aircraft_draw_argument_value(203,NavLightSwitchIsOn)
+	set_aircraft_draw_argument_value(192,NavLightSwitchIsOn)
+	--set_aircraft_draw_argument_value(203,NavLightSwitchIsOn)
 	
 	set_aircraft_draw_argument_value(195,StrobeLightSwitchIsOn)
 	set_aircraft_draw_argument_value(196,StrobeLightSwitchIsOn)
