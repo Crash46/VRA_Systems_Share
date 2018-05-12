@@ -102,7 +102,7 @@ Engine_FF_L.output					= {0.0, 1.0}
 
 Engine_TEMP_L						= CreateGauge()
 Engine_TEMP_L.arg_number			= 52
-Engine_TEMP_L.input					= {300, 900} 
+Engine_TEMP_L.input					= {300, 1100} 
 Engine_TEMP_L.output				= {0.3, 0.9}
 Engine_TEMP_L.controller			= controllers.base_gauge_EngineLeftTemperatureBeforeTurbine
 
